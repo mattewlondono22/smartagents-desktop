@@ -1,0 +1,265 @@
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
+     Running beforeBuildCommand `npm run build`
+
+> smartagents-desktop@0.1.0 build
+> npm run tauri build
+
+
+> smartagents-desktop@0.1.0 tauri
+> tauri build
+
