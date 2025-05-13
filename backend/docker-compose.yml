@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/app/src
+      - ./chroma_storage:/app/chroma_storage
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  # Optional: Add more services like database, caching, etc.
+
+networks:
+  windsurf_network:
+    driver: bridge

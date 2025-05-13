@@ -1,0 +1,17 @@
+{
+  "name": "smartagents-desktop",
+  "version": "0.1.0",
+  "description": "SmartAgents Desktop Application",
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build"
+  },
+  "workspaces": [
+    "frontend",
+    "src-tauri"
+  ],
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.5.0"
+  }
+}

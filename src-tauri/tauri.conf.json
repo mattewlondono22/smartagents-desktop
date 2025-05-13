@@ -1,0 +1,9 @@
+{
+    "identifier": "com.windsurf.smartagents",
+    "productName": "SmartAgents",
+    "version": "0.1.0",
+    "build": {
+        "beforeDevCommand": "npm run dev",
+        "beforeBuildCommand": "npm run build"
+    }
+}

@@ -1,0 +1,181 @@
+Cargo.toml
+```
+[package]
+name = "windsurf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tauri = { version = "2.0", features = ["api-all"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+```
+
+src-tauri/tauri.conf.json
+```
+{
+  "build": {
+    "beforeDevCommand": "cd ../frontend && npm install && npm run dev",
+    "beforeBuildCommand": "cd ../frontend && npm install && npm run build",
+    "devPath": "http://localhost:5173",
+    "distDir": "../frontend/dist"
+  },
+  "tauri": {
+    "bundle": {
+      "externalBin": []
+    },
+    "security": {
+      "csp": null
+    }
+  }
+}
+```
+
+src-tauri/src/main.rs
+```
+#![cfg_attr(all(not(debug_assertions), target_os = "windows"), windows_subsystem = "windows")]
+
+use serde::{Serialize, Deserialize};
+use tauri::Manager;
+
+#[derive(Serialize, Deserialize)]
+struct Agent {
+  id: u32,
+  name: String,
+}
+
+static mut AGENTS: Vec<Agent> = Vec::new();
+
+#[tauri::command]
+fn list_agents() -> Vec<String> {
+  unsafe { AGENTS.iter().map(|a| a.name.clone()).collect() }
+}
+
+#[tauri::command]
+fn create_agent(name: String) -> Agent {
+  let new = Agent { id: 0, name };
+  unsafe { AGENTS.push(new.clone()); }
+  new
+}
+
+#[tauri::command]
+fn ingest_file(path: String) -> String {
+  format!("Received file: {}", path)
+}
+
+fn main() {
+  tauri::Builder::default()
+    .invoke_handler(tauri::generate_handler![list_agents, create_agent, ingest_file])
+    .run(tauri::generate_context!())
+    .expect("error while running tauri application");
+}
+```
+
+frontend/package.json
+```
+{
+  "name": "windsurf-frontend",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "svelte": "^3.0.0",
+    "@tauri-apps/api": "^2.0.0"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0",
+    "svelte-kit": "^1.0.0",
+    "@sveltejs/vite-plugin-svelte": "^2.0.0",
+    "typescript": "^4.0.0"
+  }
+}
+```
+
+frontend/vite.config.ts
+```
+import { defineConfig } from 'vite';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
+
+export default defineConfig({
+  plugins: [svelte()],
+  clearScreen: false,
+  server: { strictPort: true },
+  envPrefix: ['VITE_', 'TAURI_'],
+  build: {
+    target: process.env.TAURI_PLATFORM == 'windows' ? 'chrome105' : 'safari13',
+    minify: !process.env.TAURI_DEBUG,
+    sourcemap: !!process.env.TAURI_DEBUG,
+    outDir: 'dist'
+  }
+});
+```
+
+frontend/src/main.ts
+```
+import App from './App.svelte';
+
+const app = new App({
+  target: document.getElementById('app')
+});
+
+export default app;
+```
+
+frontend/src/App.svelte
+```
+<script lang="ts">
+  import { onMount } from 'svelte';
+  import { invoke } from '@tauri-apps/api/tauri';
+  let agents: string[] = [];
+
+  async function loadAgents() {
+    agents = await invoke('list_agents') as string[];
+  }
+  onMount(loadAgents);
+</script>
+
+<main>
+  <h1>Windsurf Agent Studio</h1>
+  <button on:click={loadAgents}>Load Agents</button>
+  <ul>
+    {#each agents as name}
+      <li>{name}</li>
+    {/each}
+  </ul>
+</main>
+
+<style>
+  main { padding: 2rem; font-family: sans-serif; }
+  button { margin-bottom: 1rem; }
+</style>
+```
+
+README.md
+```
+# Windsurf Agent Studio
+
+## Development
+
+```bash
+# Install frontend deps
+cd frontend
+npm install
+
+# Run in dev
+npm run dev
+cd ../src-tauri
+cargo tauri dev
+```
+
+## Build
+
+```bash
+# Build frontend
+cd frontend && npm run build
+# Build app
+cd ../src-tauri && cargo tauri build
+```
+```
